@@ -86,3 +86,61 @@ Join PortfolioProject..CovidVaccinations vac
  From #PercentPopulationVaccinated
 
 ```
+
+
+# Covid-19-Analysis-Visualization
+
+SQL queiries have been  performed on Covid19 dataset and the outcome is  visualised  using Tablaeu. 
+
+### 1. Global covid Numbers
+For this, total cases, total deaths and death percentage  are presented in tabular form.
+```
+Select  SUM(new_cases) as TotalCases, SUM(cast(new_deaths as int)) as TotalDeaths, (SUM(cast(new_deaths as int))/SUM(new_cases))*100 as DeathPercent
+from PortfolioProject..CovidDeaths
+
+Where continent is not null
+--group by date
+order by 1,2
+```
+
+### 2. Total Deaths
+Here the total death count has been visualised in a bar graph.
+
+```
+Select location, SUM(cast(new_deaths as int)) as TotalDeathCount
+From PortfolioProject..CovidDeaths 
+where continent is null
+and location not in ('World', 'European Union', 'International')
+Group by location
+order by TotalDeathCount desc
+
+```
+
+
+
+
+### 3.  Countries with Highest Covid Rate
+For this, increase in the number of covid 19 cases in differetnt countries is represented with a line graph.
+This graph also reprsents the forcasted covid19 infection count till March 2022.
+```
+
+Select Location, date,  MAX(total_cases) as HighestInfectionCount, population, MAX((total_cases/population))*100 as PopulationInfectedPercent
+from PortfolioProject..CovidDeaths
+Where continent is not null
+--Where location like '%India%'
+Group by Location, population, date
+order by PopulationInfectedPercent desc
+```
+
+
+### 4. Percent Population Infected
+For this, map representation has been used to depict number of covid19 cases worldwide.
+```
+Select Location,  MAX(total_cases) as HighestInfectionCount, population, MAX((total_cases/population))*100 as PopulationInfectedPercent
+from PortfolioProject..CovidDeaths
+Where continent is not null
+--Where location like '%India%'
+Group by Location, population
+order by PopulationInfectedPercent desc
+```
+
