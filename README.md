@@ -1,5 +1,7 @@
 # Covid19-Analysis
 
+![Tableau Visualization](Covid19_Tableau-Viz.jpeg)
+
 
 ### 1. Total cases  vs total deaths in India
 For this, death percentage is calculated and inserted in a new column called DeathPercent along with the number of cases and deaths in the country.
