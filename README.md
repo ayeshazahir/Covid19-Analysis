@@ -149,4 +149,4 @@ order by PopulationInfectedPercent desc
 ```
 
 ### References
-This project is an implementation of the queries performed [here](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/COVID%20Portfolio%20Project%20-%20Data%20Exploration.sql) on this [dataset](https://ourworldindata.org/covid-deaths) 
+This project is an implementation of the queries performed [here](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/COVID%20Portfolio%20Project%20-%20Data%20Exploration.sql) on this [dataset](https://ourworldindata.org/covid-deaths).
