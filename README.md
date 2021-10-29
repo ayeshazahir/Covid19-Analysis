@@ -3,7 +3,7 @@ The aim of the project is to perform exploratory data analysis on Covid-19 datas
 
 ### Tableau Dashboard 
 In this interactive dashboard, death counts and percentages are shown, a line graph of countries with the total and forecasted cases are shown, and a map representation of cases worldwide.
-The SQL queries used to make the dashboard are [here]().
+The SQL queries used to make the dashboard are [here](https://github.com/ayeshazahir/Covid19-Analysis#covid-19-visualization-queries).
 
 Link to the [Tableau Dashboard](https://public.tableau.com/app/profile/ayesha.maria.zahir/viz/Covid-19Dashboard_16351690853370/Dashboard1?publish=yes) 
 
